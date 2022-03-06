@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 }
 
-body {
+body, html {
 	font-size: 16px;
 	font-family: "Monserrat", sans-serif;
 	color: rgba(0, 0, 0, 0.87);
@@ -11,31 +11,30 @@ body {
 }
 
 .header-bar {
-	background: #FFFFFF;
 	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	background: #FFFFFF;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	z-index: 3;
 	width: 100%;
 }
 
-.header-bar nav {
-	float: left;
+.navbar {
+	align-items: center;
 }
 
-.header-bar nav a {
+.navbar a {
 	color: #9F9F9F;
 	text-decoration: none;
 	font-weight: 500px;
 	margin: 0 53px;
 }
 
-.header-bar nav a:hover, .header-bar nav a.active {
+.navbar a:hover, .navbar a.active {
 	color: #000000;
-}
-
-.socials {
-	float: right;
 }
 
 .socials a {
@@ -52,21 +51,24 @@ body {
 	background: no-repeat center center / cover url(../images/header.png);
 }
 
+.body-content {
+	display: flex;
+}
+
 .main {
-	float: left;
+	position: relative;
 	width: calc(100% - 378px);
 	background: #FFFFFF;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+	z-index: 2;
 }
 
 .side-bar {
-	float: right;
+	position: relative;
+	z-index: 1;
 	width: 375px;
 	background: #FBFBFB;
 	padding: 0 40px;
-}
-
-.footer {
-	clear: both;
 }
 
 .sidebar-title {
@@ -74,10 +76,6 @@ body {
 	color: #000000;
 	margin: 35px 0;
 }
-
-/* .sidebar-title:first-child {
-	margin-top: 0;
-} */
 
 .side-bar a {
 	color: #9F9F9F;
@@ -101,5 +99,53 @@ body {
 
 .side-bar hr {
 	margin: 50px 0;
+	border: none;
+	height: 1px;
 	background: #C4C4C4;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 940px;
+}
+.article {
+	position: relative;
+	margin: 50px;
+	padding-left: 333px;
+	min-height: 203px;
+}
+
+.article-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 308px;
+	margin-right: 25px;
+}
+
+.article-img img {
+	width: 100%;
+	height: auto;
+}
+
+.article-date {
+	font-weight: 300;
+	color: rgba(0, 0, 0, 0.6);
+	margin-bottom: 5px;
+}
+
+.article-title {
+	font-size: 2.25rem;
+	line-height: 1.1;
+	font-family: "Cardo", serif;
+	margin: 0 0 15px 0;
+}
+
+.article-title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.article-title a:hover {
+	text-decoration: underline;
 }
