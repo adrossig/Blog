@@ -6,8 +6,8 @@ body {
 	font-size: 16px;
 	font-family: "Monserrat", sans-serif;
 	color: rgba(0, 0, 0, 0.87);
-	line-height: 1.8em;
-	text-align: justify;
+	line-height: 1.6;
+	margin: 0;
 }
 
 .header-bar {
@@ -16,35 +16,90 @@ body {
 	left: 0;
 	right: 0;
 	top: 0;
-	bottom: 94.45%;
-	margin: 30px;
-	box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.235);
+	width: 100%;
 }
 
-.nav-bar a {
+.header-bar nav {
+	float: left;
+}
+
+.header-bar nav a {
 	color: #9F9F9F;
 	text-decoration: none;
 	font-weight: 500px;
-	margin: 0 26.5px;
+	margin: 0 53px;
 }
 
-.nav-bar a:hover, .nav-bar a.active {
+.header-bar nav a:hover, .header-bar nav a.active {
 	color: #000000;
 }
 
-/* .nav-bar {
-	position: absolute;
-	top: 22.28%;
-	left: 7.4%;
-	right: 61.09%;
-	bottom: 77.72%;
-} */
-
 .socials {
 	float: right;
-	margin: -25px 32.5px;
 }
 
 .socials a {
 	padding: 0 12px;
+	opacity: 0.5;
+}
+
+.socials a:hover {
+	opacity: 1;
+}
+
+.header-img {
+	height: 427px;
+	background: no-repeat center center / cover url(../images/header.png);
+}
+
+.main {
+	float: left;
+	width: calc(100% - 378px);
+	background: #FFFFFF;
+}
+
+.side-bar {
+	float: right;
+	width: 375px;
+	background: #FBFBFB;
+	padding: 0 40px;
+}
+
+.footer {
+	clear: both;
+}
+
+.sidebar-title {
+	font-size: 30px;
+	color: #000000;
+	margin: 35px 0;
+}
+
+/* .sidebar-title:first-child {
+	margin-top: 0;
+} */
+
+.side-bar a {
+	color: #9F9F9F;
+	text-decoration: none;
+}
+
+.side-bar a:hover {
+	text-decoration: underline;
+}
+
+.side-bar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 17px;
+}
+
+.side-bar li {
+	padding: 6px 0;
+}
+
+.side-bar hr {
+	margin: 50px 0;
+	background: #C4C4C4;
 }
